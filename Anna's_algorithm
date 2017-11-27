@@ -1,0 +1,20 @@
+import pandas as pd
+import numpy as np
+import sys #sys needed only for python version
+#import gaussian naive bayes from scikit-learn
+import sklearn as sk
+#seaborn for pretty plots
+import seaborn as sns
+
+#display versions of python and packages
+print('\npython version ' + sys.version)
+print('pandas version ' + pd.__version__)
+print('numpy version ' + np.__version__)
+print('sk-learn version ' + sk.__version__)
+print('seaborn version ' + sns.__version__)
+
+df = pandas.read_csv('OriginalDatasetDS.csv', sep=',', header=None, 
+                     error_bad_lines=False, warn_bad_lines=True, 
+                     low_memory=False)
+pandas.options.display.max_columns = 22
+print(df.sample(n=10))
